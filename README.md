@@ -221,9 +221,9 @@ lihat apakah ada outlier utama dalam homogenitas varians.
   -  Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain?
 
      ```yml
-      av <- aov(Length ~ factor(Group), data = DataKucingITS)
+       av <- aov(Length ~ factor(Group), data = DataKucingITS)
       TukeyHSD(av)
-    ```
+     ```
     
   - Visualisasikan data dengan ggplot2
   
@@ -233,6 +233,7 @@ lihat apakah ada outlier utama dalam homogenitas varians.
        geom_boxplot(fill = "black", colour = "Red")  + 
        scale_x_discrete() + xlab("Group") + ylab("Length")
     ```
+    ![Soal4a](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal4a.PNG)
     
 ## Soal 5
 Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk

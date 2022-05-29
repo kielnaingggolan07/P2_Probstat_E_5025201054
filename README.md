@@ -187,14 +187,14 @@ lihat apakah ada outlier utama dalam homogenitas varians.
       DataKucingITS <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"),header = TRUE, check.names = TRUE)
        byGroup <- split(DataKucingITS, DataKucingITS$Group)
      ```  
-     setealah datanya kita baca dan masukkan kedalam tabel, amaka kita set nama variabel kucingnya.
+     setelah datanya kita baca dan masukkan kedalam tabel, maka kita set nama variabel grupnya.
      
      ```yml
       grup1 <- byGroup$`1`
       grup2 <- byGroup$`2`
       grup3 <- byGroup$`3`
      ``` 
-     kemudian kita bagi menjadi beberapa grup, tergantung dengan jenis kucingnya
+     kemudian kita bagi tampilkan menggunakan <code>qqnorm</code>
    
       ```yml
         qqnorm(grup1$Length,main = "Grup1")

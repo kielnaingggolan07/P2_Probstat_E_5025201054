@@ -51,9 +51,35 @@ oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
   ```
       
       
+## Soal 2
+Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
+Untuk menguji klaim ini, 100 pemilik mobil yang dipilih secara acak diminta untuk
+mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
+23.500 kilometer dan standar deviasi 3900 kilometer. (Kerjakan menggunakan library seperti referensi pada modul)
+
+   - Apakah Anda setuju dengan klaim tersebut?
+   
+      ```yml
+        Setuju
+      ```
+      untuk mencari nilai z dan p-value :
+        - menggunakan library
+           ```yml
+            zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,  
+            alternative = "less", mu = 20000,
+            conf.level = 0.95)
+          ```
+        - secara manual
+          ```yml
+            N <- 20000
+            n <- 100
+            rata <- 23500
+            sd <- 3900
+            z <- (rata-N)/(sd*sqrt(n))
+          ```
+          
+   - Jelaskan maksud dari output yang dihasilkan!
       
-  
- 
  
 
 

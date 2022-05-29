@@ -84,7 +84,9 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
         dimana rata-rata kecepatan => 20000. dari hasil tersebut kita juga yakin,
         bahwa dengan kepercayaan 95% kecepatan mobil berada pada 24141.49 km per tahun (>20000)
       ```
-
+      jawaban :     
+![Soal2](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal2.PNG)
+      
       
  
 

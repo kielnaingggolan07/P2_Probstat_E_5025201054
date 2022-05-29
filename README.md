@@ -184,8 +184,8 @@ Maka Kerjakan atau Carilah
 lihat apakah ada outlier utama dalam homogenitas varians.
 
     ```yml
-      DataKucingITS <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"),header = TRUE, check.names = TRUE)
-       byGroup <- split(DataKucingITS, DataKucingITS$Group)
+      Datacat <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"),header = TRUE, check.names = TRUE)
+       byGroup <- split(Datacat, Datacat$Group)
      ```  
      setelah datanya kita baca dan masukkan kedalam tabel, maka kita set nama variabel grupnya.
      
@@ -205,12 +205,12 @@ lihat apakah ada outlier utama dalam homogenitas varians.
   - carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?
   
      ```yml
-      bartlett.test(DataKucingITS$Length, DataKucingITS$Group)
+      bartlett.test(Datacat$Length, Datacat$Group)
      ```
   -  Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
   
     ```yml
-      model1 <- lm(DataKucingITS$Length~DataKucingITS$Group)
+      model1 <- lm(Datacat$Length~Datacat$Group)
       summary(model1)
     ```
     
@@ -221,7 +221,7 @@ lihat apakah ada outlier utama dalam homogenitas varians.
   -  Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain?
 
      ```yml
-       av <- aov(Length ~ factor(Group), data = DataKucingITS)
+       av <- aov(Length ~ factor(Group), data = Datacat)
       TukeyHSD(av)
      ```
     
@@ -229,7 +229,7 @@ lihat apakah ada outlier utama dalam homogenitas varians.
   
     ```yml
       library(ggplot2)
-      ggplot(DataKucingITS, aes(x = Group, y = Length)) + 
+      ggplot(Datacat, aes(x = Group, y = Length)) + 
        geom_boxplot(fill = "black", colour = "Red")  + 
        scale_x_discrete() + xlab("Group") + ylab("Length")
     ```

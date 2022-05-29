@@ -233,5 +233,30 @@ Eksperimen. Dengan data tersebut:
     ![Soal5b](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5b.PNG)
     ![Soal5c](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5c.PNG)
      
+     Dengan mempertimbangkan taraf signifikansi 0,05, tabel ANOVA menunjukkan bahwa terdapat signifikansi suhu, jenis kaca pelat muka, dan interaksi antar keduanya.      Hasil ini diharapkan mengingat visualisasi data sebelumnya yang dilakukan pada bagian sebelumnya.
+     
+     
+  - Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)
+  
+  ```yml
+    data_summary <- group_by(GTL, Glass, Temp) %>%
+    summarise(mean=mean(Light), sd=sd(Light)) %>%
+    arrange(desc(mean))
+    print(data_summary)
+  ```
+  untuk menampilkan tabel mean dan standar deviasi keluaran cahaya, maka menggunakan <code>summarise(mean=mean(Light))</code> dan <code>arrange(desc(mean))</code>
+  
+   ![Soal5d](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5d.PNG)
 
+  - Lakukan uji Tukey
+    
+    ```yml
+      tukey <- TukeyHSD(anova)
+      print(tukey)
+    ```
+    untuk melakukan pengujian Tukey, maka pertama kita defenisikan <code>tukey</code> sebagai variabel penampung. kemudian menggunakan fungsi <code>TukeyHSD</code> dari variabel <code>anova</code> yang sebelumnya telah dibuat.
+    
+    ![Soal5e](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5e.PNG)
+    ![Soal5f](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5f.PNG)
+    
 

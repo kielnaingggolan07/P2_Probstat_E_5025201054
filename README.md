@@ -175,6 +175,63 @@ rata-ratanya (α= 0.05)? Buatlah
       terdapat perbedaan rata rata pada bandung dan bali jika alpa nya 0.05 dan variance bebas
     ```  
 
+## Soal 4
+H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama.
+Maka Kerjakan atau Carilah
 
+  - Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1,grup
+2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan
+lihat apakah ada outlier utama dalam homogenitas varians.
+
+
+## Soal 5
+Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
+mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca
+pelat muka (A, B dan C) pada keluaran cahaya tabung osiloskop. Percobaan
+dilakukan sebanyak 27 kali dan didapat data sebagai berikut: Data Hasil
+Eksperimen. Dengan data tersebut:
+
+  - Buatlah plot sederhana untuk visualisasi data
+      
+      hal pertama yang kita lakukan ialah menginstal package, dan data dari soal:
+      
+       ```yml
+         library(readr)
+         library(ggplot2)
+         library(multcompView)
+         library(dplyr)
+      ```
+      kemudian kita panggil file <code>GTL.cvs</code>. untuk memfisualisasi kta gunakan <code>read_cvs</code> dan <code>head(GTL)</code>
+      ```yml
+         GTL <- read_csv("GTL.csv")
+         head(GTL)
+         str(GTL)
+         qplot(x = Temp, y = Light, geom = "point", data = GTL) + facet_grid(.~Glass, labeller = label_both)
+      ```
+      
+      ![Soal5](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5.PNG)
+      ![Soal5](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5a.PNG)
+      
+  - Lakukan uji ANOVA dua arah
+    
+    kita create sebuah variabel sebagai faktor untuk ANOVA
+    
+    ```yml
+      GTL$Glass <- as.factor(GTL$Glass)
+      GTL$Temp_Factor <- as.factor(GTL$Temp)
+      str(GTL)
+    ```
+    ![Soal5a](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5a.PNG)
+    
+    setelah itu, kita defenisikan ANOVA:
+     
+    ```yml
+      anova <- aov(Light ~ Glass*Temp_Factor, data = GTL)
+      summary(anova)
+    ```
+    
+    ![Soal5b](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5b.PNG)
+    ![Soal5c](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5c.PNG)
+     
 
 

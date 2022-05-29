@@ -60,7 +60,7 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
    - Apakah Anda setuju dengan klaim tersebut?
    
       ```yml
-        Setuju
+        Setuju karena berdasarkan hasil dari p-value(1) > 0.05.
       ```
       untuk mencari nilai z dan p-value :
         - menggunakan library
@@ -79,6 +79,12 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
           ```
           
    - Jelaskan maksud dari output yang dihasilkan!
+      ```yml
+        maksud dari output yang dihasilkan peneliti setuju dengan hipotesis awal, 
+        dimana rata-rata kecepatan => 20000. dari hasil tersebut kita juga yakin,
+        bahwa dengan kepercayaan 95% kecepatan mobil berada pada 24141.49 km per tahun (>20000)
+      ```
+
       
  
 

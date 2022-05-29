@@ -120,6 +120,13 @@ rata-ratanya (α= 0.05)? Buatlah
   ```
   penggunaan <code>tsum.test</code> dikarenakan jumlah n_bandung dan n_bali < 30, dan altenative = two.side karena terdapat 2 populasi, bandung dan bali.
   
+  menentukan tes statistik :
+  ```yml 
+    n_bandung < 30
+    n_bali < 30
+  ```
+  maka menggunakan tabel t.
+  
   ![Soal3b](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal3b.PNG)
   
  - Lakukan Uji Statistik (df =2)
@@ -128,10 +135,44 @@ rata-ratanya (α= 0.05)? Buatlah
    ```yml
     uji <- qt(c(alpha/2, 1-(alpha/2)), df=2)
    ```
-
+    ![Soal3c](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal3c.PNG)
     
-      
+ - Nilai Kritikal
+   untuk menentukan nilai kritikal kita menggunakan <code>n_bandung</code> dan <code>n_bali</code> serta <code>df=2</code>
+   
+   ```yml
+    poin_kritis <- n_bali + n_bandung - 2
+   ```
+   setelah diperoleh poin kritisnya, maka selanjutnya mengecek pada tabel t, dan diperoleh:
+   
+   ```yml
+      t_tabel <- 2.015
+   ```   
  
+ - Keputusan
+    
+    pertama kita perlu mencari nilai <code>sp</code>:
+    
+     ```yml
+      sp <- (((n_bandung-1)*dp_bandung)+ ((n_bali-1)*dp_bali))/(n_bali + n_bandung - df)
+     ```
+     setelah diperoleh nilai sp, kemudian kita uji 2 sampel, <code>T</code> :
+     
+     ```yml
+       T <- (n_bandung - n_bali)/(sp*((1/n_bandung) + (1/n_bali)))
+     ```
+     maka kita dapat menarik keputusan 
+     
+     ```yml
+      melalui uji statistik dengan df = 2, maka diperoleh batas bawah = -4.3 dan batas atas = 4.3 . karena T (-62.1920)<batas bawah dan batas atas, maka menolah H0.
+     ```
+  
+ - kesimpulan
+
+    ```yml
+      terdapat perbedaan rata rata pada bandung dan bali jika alpa nya 0.05 dan variance bebas
+    ```  
+
 
 
 

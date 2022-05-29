@@ -42,6 +42,13 @@ dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
 aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
 pengaruh yang signifikan secara statistika dalam hal kadar saturasi
 oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
+     
+    untuk mencari apakah H0 ditolak atau tidak maka, kita tentukan nilai T menggunakan tabel t statistika, dan diperoleh hasil :
+  ```yml
+       df <- 9-1
+       alpa <- 0.05
+       T <- 2.306
+  ```
       
       
       

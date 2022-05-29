@@ -258,5 +258,15 @@ Eksperimen. Dengan data tersebut:
     
     ![Soal5e](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5e.PNG)
     ![Soal5f](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5f.PNG)
+   
+ - Gunakan compact letter display untuk menunjukkan perbedaan signifikan antara uji Anova dan uji Tukey.
+ 
+    ```yml
+      tukey.cld <- multcompLetters4(anova, tukey)
+      print(tukey.cld)
+    ```
+    untk menunjukkan perbedaan signifikan anatara uji anova dan uji tukey, maka digunakan function <code>multcompLetters4(anova, tukey)</code>.
+    ![Soal5g](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal5g.PNG)
     
+  
 

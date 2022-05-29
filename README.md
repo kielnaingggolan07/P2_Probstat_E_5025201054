@@ -183,7 +183,57 @@ Maka Kerjakan atau Carilah
 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan
 lihat apakah ada outlier utama dalam homogenitas varians.
 
+    ```yml
+      DataKucingITS <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"),header = TRUE, check.names = TRUE)
+       byGroup <- split(DataKucingITS, DataKucingITS$Group)
+     ```  
+     setealah datanya kita baca dan masukkan kedalam tabel, amaka kita set nama variabel kucingnya.
+     
+     ```yml
+      grup1 <- byGroup$`1`
+      grup2 <- byGroup$`2`
+      grup3 <- byGroup$`3`
+     ``` 
+     kemudian kita bagi menjadi beberapa grup, tergantung dengan jenis kucingnya
+   
+      ```yml
+        qqnorm(grup1$Length,main = "Grup1")
+        qqnorm(grup2$Length,main = "Grup2")
+        qqnorm(grup3$Length,main = "Grup3")
+     ```
 
+  - carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?
+  
+     ```yml
+      bartlett.test(DataKucingITS$Length, DataKucingITS$Group)
+     ```
+  -  Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
+  
+    ```yml
+      model1 <- lm(DataKucingITS$Length~DataKucingITS$Group)
+      summary(model1)
+    ```
+    
+  - Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
+  
+    berdasarkan hasil perhitungan sebelumnya maka didapatkan nilai P adalah 0.6401. Sehingga, Hipotesis H0 dapat diterima.
+    
+  -  Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain?
+
+     ```yml
+      av <- aov(Length ~ factor(Group), data = DataKucingITS)
+      TukeyHSD(av)
+    ```
+    
+  - Visualisasikan data dengan ggplot2
+  
+    ```yml
+      library(ggplot2)
+      ggplot(DataKucingITS, aes(x = Group, y = Length)) + 
+       geom_boxplot(fill = "black", colour = "Red")  + 
+       scale_x_discrete() + xlab("Group") + ylab("Length")
+    ```
+    
 ## Soal 5
 Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
 mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca

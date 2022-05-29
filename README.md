@@ -121,8 +121,13 @@ rata-ratanya (α= 0.05)? Buatlah
   penggunaan <code>tsum.test</code> dikarenakan jumlah n_bandung dan n_bali < 30, dan altenative = two.side karena terdapat 2 populasi, bandung dan bali.
   
   ![Soal3b](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal3b.PNG)
+  
  - Lakukan Uji Statistik (df =2)
-   
+ 
+   untuk melaukan uji statistik dengan <code>df=2</code>, maka melakukan dengan t tabel menggunakan fungsi <code>qt</code>
+   ```yml
+    uji <- qt(c(alpha/2, 1-(alpha/2)), df=2)
+   ```
 
     
       

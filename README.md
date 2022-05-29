@@ -61,6 +61,8 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
    
       ```yml
         Setuju karena berdasarkan hasil dari p-value(1) > 0.05.
+        H0: µ => 20.000
+        H1: µ < 20.000
       ```
       untuk mencari nilai z dan p-value :
         - menggunakan library
@@ -89,6 +91,27 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
 
 
   - Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
+    ```yml
+      Berdasarkan hasil p-value yang diperoleh p-value (1) > 0.05, maka 
+      dapat dikatakan bahwa tidak ada perbedaan nyata antara populasi. artinya semua populasi memiki kecepatan > 20000 per tahunnya.
+      Maka dari hasil p-value nya terima H0, kecepatan > 20000 per tahunnya
+    ```
+    
+  
+## Soal 3
+![Soal3](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal3.PNG)
+
+Dari data diatas berilah keputusan serta kesimpulan yang didapatkan dari hasil
+diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada
+rata-ratanya (α= 0.05)? Buatlah
+
+  - H0 dan H1
+  ```yml
+  H0 <- rata-rata bali = rata-rata bandung
+  H1 <- rata-rata bali != rata-rata bandung
+  ```
+
+
     
       
  

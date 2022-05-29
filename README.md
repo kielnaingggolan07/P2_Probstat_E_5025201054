@@ -86,7 +86,10 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
       ```
       jawaban :     
 ![Soal2](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal2.PNG)
-      
+
+
+  - Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
+    
       
  
 

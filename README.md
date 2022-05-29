@@ -92,10 +92,13 @@ mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata
 
   - Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
     ```yml
-      Berdasarkan hasil p-value yang diperoleh p-value (1) > 0.05, maka 
+    P(Z > 8.9744) = 1 - P(Z < 8.977)
+                  = 1 - 1 = 0
+    ```
+    Berdasarkan hasil p-value yang diperoleh p-value (1) > 0.05 dan hasil P(Z > 8.9744) = 0, maka
       dapat dikatakan bahwa tidak ada perbedaan nyata antara populasi. artinya semua populasi memiki kecepatan > 20000 per tahunnya.
       Maka dari hasil p-value nya terima H0, kecepatan > 20000 per tahunnya
-    ```
+    
     
   
 ## Soal 3
@@ -111,6 +114,15 @@ rata-ratanya (α= 0.05)? Buatlah
   H1 <- rata-rata bali != rata-rata bandung
   ```
 
+  - Hitung Sampel Statistik
+  ```yml  
+  tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19, mean.y =2.79 , s.y = 1.32, n.y = 27, alternative = "two.side", var.equal = TRUE, conf.level = 0.95)
+  ```
+  penggunaan <code>tsum.test</code> dikarenakan jumlah n_bandung dan n_bali < 30, dan altenative = two.side karena terdapat 2 populasi, bandung dan bali.
+  
+  ![Soal3b](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal3b.PNG)
+ - Lakukan Uji Statistik (df =2)
+   
 
     
       

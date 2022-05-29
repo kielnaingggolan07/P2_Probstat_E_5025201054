@@ -1,1 +1,53 @@
 # P2_Probstat_E_5025201054
+
+#### Praktikum 2 [ Probabilitas & Statistika ]
+
+
+## Soal 1
+Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari responden ke-3 ketika belum melakukan aktivitas 𝐴 sebanyak 67, 
+dan setelah melakukan aktivitas 𝐴 sebanyak 70.
+
+![Soal1](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/Soal1.PNG)
+
+  - Carilah Standar Deviasi dari data selisih pasangan pengamatan tabel diatas.
+ 
+      Untuk menentukan standar deviasi dari datanya, maka hal pertama yang dilakukan ialah mencari selisi dari x dan y:
+      
+       ```yml
+         x <- c(78,75,67,77,70,72,78,74,77)
+         y <- c(100,95,70,90,90,90,89,90,100)
+         selisi <- c(y-x)
+       ```
+        
+      setelah kita mendapat selisih dari x dan y, maka selanjutnya kita mencari standar deviasi menggunakan fungsi <code>sd</code> :
+       
+       ```yml
+       sd <- sd(selisi)
+       ```
+    
+  - carilah nilai t (p-value)
+      Untuk mecari nilai t, maka pertama kita harus mencari rata-rata dari selisih x dan y:
+      
+      ```yml
+       d <- sum(selisi)/9
+       t <- (d-0)/(sd/sqrt(9))
+      ```
+      setelah kita mendapat rata-rata, maka kita masukkan kedalam rumus:
+       ```yml
+       t <- (d-0)/(sd/sqrt(9))
+      ```
+      
+  - tentukanlah apakah terdapat pengaruh yang signifikan secara statistika
+dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
+aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
+pengaruh yang signifikan secara statistika dalam hal kadar saturasi
+oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
+      
+      
+      
+  
+ 
+ 
+
+
+

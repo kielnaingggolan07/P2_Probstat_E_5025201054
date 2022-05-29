@@ -161,6 +161,8 @@ rata-ratanya (α= 0.05)? Buatlah
      ```yml
        T <- (n_bandung - n_bali)/(sp*((1/n_bandung) + (1/n_bali)))
      ```
+     ![Soal3d1](https://github.com/Kielgolan10/P2_Probstat_E_5025201054/blob/main/Screenshoot/soal3d1.PNG)
+     
      maka kita dapat menarik keputusan 
      
      ```yml
